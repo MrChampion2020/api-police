@@ -31,7 +31,7 @@ const bodyParser = require('body-parser')
 
 
 const corsOptions = {
-  origin: 'https://police-psi.vercel.app/',
+  origin: 'https://police-psi.vercel.app',
   credentials: true,
   optionSuccessStatus: 200,
 };
