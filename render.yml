@@ -1,0 +1,27 @@
+services:
+  - name: police
+    type: web
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: yarn install && yarn build
+    startCommand: node index
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false # Add this key in Render's environment variables UI
+      - key: SECURITYKEY
+        sync: false
+      - key: SMTP_MAIL
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: PORT
+        value: 5000
+
+       
+
+
+
